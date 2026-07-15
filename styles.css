@@ -1029,3 +1029,313 @@ color:rgba(255,255,255,.62);
 width:240px;
 transition:.45s ease;
 }
+
+/*======================================================
+RESPONSIVE
+Version 1.0
+======================================================*/
+
+/* ---------- Large Laptop ---------- */
+
+@media (max-width:1400px){
+
+.hero{
+grid-template-columns:1.15fr .85fr;
+gap:72px;
+}
+
+.hero-text h1{
+font-size:4.7rem;
+}
+
+.section{
+padding:100px 0;
+}
+
+}
+
+/* ---------- Laptop ---------- */
+
+@media (max-width:1200px){
+
+:root{
+--container:1040px;
+}
+
+.hero{
+grid-template-columns:1fr;
+gap:60px;
+text-align:center;
+}
+
+.hero-text{
+margin:auto;
+}
+
+.hero-text h1{
+max-width:none;
+}
+
+.summary{
+margin-inline:auto;
+}
+
+.hero-highlights{
+align-items:center;
+}
+
+.hero-actions{
+justify-content:center;
+}
+
+.hero-metrics{
+max-width:650px;
+margin:50px auto 0;
+}
+
+.hero-card{
+max-width:620px;
+margin:auto;
+}
+
+.timeline{
+grid-template-columns:1fr;
+}
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.contact-card{
+grid-template-columns:1fr;
+gap:50px;
+text-align:center;
+}
+
+.contact-text{
+margin:auto;
+}
+
+.contact-actions{
+max-width:520px;
+margin:auto;
+}
+
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:768px){
+
+.header-top{
+height:72px;
+}
+
+.nav{
+display:none;
+}
+
+.hero{
+padding-top:130px;
+}
+
+.hero-text h1{
+font-size:3.6rem;
+}
+
+.hero-card{
+padding:38px;
+}
+
+.hero-metrics{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.info-card{
+padding:34px;
+}
+
+.contact-card{
+padding:44px 30px;
+}
+
+.section-heading h2{
+font-size:2.5rem;
+}
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:540px){
+
+body{
+font-size:15px;
+}
+
+.hero{
+padding-top:110px;
+padding-bottom:80px;
+}
+
+.hero-text h1{
+font-size:2.9rem;
+}
+
+.summary{
+font-size:1rem;
+}
+
+.hero-actions{
+flex-direction:column;
+}
+
+.hero-actions .btn{
+width:100%;
+}
+
+.hero-card{
+padding:30px 24px;
+}
+
+.profile-photo{
+width:140px;
+height:140px;
+}
+
+.snapshot-name{
+font-size:1.8rem;
+}
+
+.info-card{
+padding:28px 24px;
+}
+
+.timeline-card{
+padding:34px 24px;
+}
+
+.contact-card{
+padding:34px 22px;
+border-radius:24px;
+}
+
+.contact-actions .btn{
+width:100%;
+}
+
+.site-footer{
+padding:60px 20px;
+}
+
+}
+
+/*======================================================
+HAMBURGER MENU
+======================================================*/
+
+.menu-toggle{
+display:none;
+width:46px;
+height:46px;
+padding:0;
+border:none;
+background:transparent;
+cursor:pointer;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:6px;
+}
+
+.menu-toggle span{
+display:block;
+width:22px;
+height:2px;
+background:#fff;
+border-radius:999px;
+transition:.35s ease;
+}
+
+@media (max-width:992px){
+
+.brand{
+flex-shrink:0;
+}
+
+.header-avatar{
+flex-shrink:0;
+}
+
+.header-actions{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.menu-toggle{
+display:flex;
+}
+
+.nav{
+
+position:fixed;
+
+top:82px;
+
+left:0;
+
+right:0;
+
+background:#0f1d2d;
+
+padding:28px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:18px;
+
+border-top:1px solid rgba(255,255,255,.06);
+
+transform:translateY(-120%);
+
+opacity:0;
+
+pointer-events:none;
+
+transition:.35s ease;
+
+z-index:999;
+
+}
+
+.nav.active{
+
+transform:translateY(0);
+
+opacity:1;
+
+pointer-events:auto;
+
+}
+
+.nav a{
+
+padding:8px 0;
+
+font-size:1rem;
+
+width:100%;
+
+}
+
+}
