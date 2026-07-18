@@ -588,6 +588,8 @@ border:1px solid rgba(255,255,255,.08);
 border-radius:22px;
 padding:36px;
 transition:.3s ease;
+overflow:hidden;
+position:relative;
 }
 
 .info-card:hover{
@@ -599,10 +601,14 @@ box-shadow:0 30px 70px rgba(0,0,0,.35);
 .info-card h3{
 font-size:1.3rem;
 margin-bottom:16px;
+min-height:72px;
+display:flex;
+align-items:flex-start;
 }
 
 .info-card p{
-color:var(--muted);
+color:inherit;
+opacity:.8;
 line-height:1.8;
 }
 
@@ -618,11 +624,6 @@ color:var(--gold-light);
 font-weight:700;
 font-size:.82rem;
 letter-spacing:.03em;
-}
-
-.info-card{
-overflow:hidden;
-position:relative;
 }
 
 .info-card::before{
@@ -1364,7 +1365,7 @@ button:focus-visible{
 }
 
 html{
-    scroll-padding-top:110px;
+    scroll-padding-top: 10px;
 }
 
 ::selection{
@@ -1380,4 +1381,141 @@ html{
     scroll-behavior:auto!important;
 }
 
+}
+
+/*==================================================
+LIGHT THEME
+==================================================*/
+
+body.light{
+
+--bg:#f6f7fb;
+--surface:#ffffff;
+--surface-2:#f1f3f7;
+
+--text:#1e293b;
+--muted:#64748b;
+
+--border:rgba(15,23,42,.08);
+
+--gold:#b8860b;
+--gold-light:#d4af37;
+
+background:var(--bg);
+color:var(--text);
+
+}
+
+/* Cards */
+
+body.light .info-card,
+body.light .timeline-card,
+body.light .about-card,
+body.light .contact-card,
+body.light .hero-card,
+body.light .insight-card{
+
+background:#ffffff;
+border:1px solid rgba(15,23,42,.08);
+
+box-shadow:0 14px 40px rgba(15,23,42,.06);
+
+}
+
+/* Header */
+
+body.light .site-header{
+
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(20px);
+
+border-bottom:1px solid rgba(15,23,42,.08);
+
+}
+
+/* Navigation */
+
+body.light .nav a{
+
+color:var(--text);
+
+}
+
+body.light .nav a:hover{
+
+color:var(--gold);
+
+}
+
+/* Buttons */
+
+body.light .btn.ghost{
+
+background:#ffffff;
+
+border:1px solid rgba(15,23,42,.12);
+
+color:var(--text);
+
+}
+
+body.light .btn.ghost:hover{
+
+background:#f5f5f5;
+
+}
+
+/* Footer */
+
+body.light .site-footer{
+
+border-top:1px solid rgba(15,23,42,.08);
+
+}
+
+/* Inputs */
+
+body.light input,
+body.light textarea{
+
+background:#ffffff;
+
+color:var(--text);
+
+border:1px solid rgba(15,23,42,.12);
+
+}
+
+/* Theme Button */
+
+body.light .theme-toggle{
+
+background:#ffffff;
+
+border:1px solid rgba(15,23,42,.12);
+
+color:var(--text);
+
+}
+
+/* Typography Fixes */
+
+body.light .info-card h3,
+body.light .timeline-card h3,
+body.light .section-title,
+body.light .hero h1,
+body.light h2,
+body.light h3,
+body.light h4{
+    color:var(--text);
+}
+
+body.light .info-card p,
+body.light .timeline-card p,
+body.light .hero p,
+body.light .about p,
+body.light .contact p,
+body.light .site-footer p{
+    color:var(--muted);
 }
