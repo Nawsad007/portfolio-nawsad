@@ -1519,3 +1519,13 @@ body.light .contact p,
 body.light .site-footer p{
     color:var(--muted);
 }
+
+body.light blockquote{
+    color:var(--text);
+    border-left-color:var(--gold);
+    background:rgba(212,175,55,.08);
+}
+
+body.light blockquote strong{
+    color:var(--text);
+}
